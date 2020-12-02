@@ -13,6 +13,7 @@
 -
     name: Install Updates via Yum
     hosts: all
+    become: yes
     tasks:
         - name: check packages for updates
           shell: yum list updates | awk 'f;/Updated Packages/{f=1;}' | awk '{ print $1 }'
