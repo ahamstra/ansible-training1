@@ -10,3 +10,9 @@
         command: date
       - name: Execute a command to display hosts file
         command: cat /etc/hosts
+-
+    name: Install Updates via Yum
+    hosts: all
+    tasks:
+        - name: Install Updates via Yum
+          yum: name=* state=latest
