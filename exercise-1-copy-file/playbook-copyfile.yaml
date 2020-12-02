@@ -1,8 +1,12 @@
 -
-    name: Copy file to target servers
+    name: Copy file to target servers and do some more things
     hosts: all
     tasks:
       - name: Copy file
         copy: 
           src: /tmp/test-file.txt
           dest: /tmp/test-file.txt
+      - name: Run the Date Command
+        command: Date
+      - name: Execute a command to display hosts file
+        command: cat /etc/hosts
