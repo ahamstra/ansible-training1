@@ -7,6 +7,6 @@
           src: /tmp/test-file.txt
           dest: /tmp/test-file.txt
       - name: Run the Date Command
-        command: Date
+        command: date
       - name: Execute a command to display hosts file
         command: cat /etc/hosts
